@@ -7,7 +7,3 @@ def transform_and_group(names):
             grouped_names[length] = []
         grouped_names[length].append(upper_name)
     return dict(sorted(grouped_names.items()))
-
-names = ["A", "BB", "CCC", "DDDD"]
-result = transform_and_group(names)
-print(result)
