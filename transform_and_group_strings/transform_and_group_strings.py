@@ -1,10 +1,10 @@
+from collections import defaultdict
+
 def transform_and_group(names: list[str]) -> dict[int, list[str]]:
-    grouped_names = {}
+    grouped_names = defaultdict(list)
     for name in names:
         upper_name = name.upper()
         length = len(upper_name)
-        if length not in grouped_names:
-            grouped_names[length] = []
         grouped_names[length].append(upper_name)
     return dict(sorted(grouped_names.items()))
 
